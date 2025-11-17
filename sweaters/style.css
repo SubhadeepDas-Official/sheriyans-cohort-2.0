@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Helvetica";
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    color:black
+}
+
+#nav1{
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #000000;
+}
+
+#nav1 a{
+    text-decoration:none;
+    font-size: 20px;
+    color:#ffffff;
+    padding: 15px;
+}
+
+#nav1 #brand{
+    text-decoration:none;
+    font-size: 30px;
+    color:#ffffff;
+    right:50%;
+    padding:450px;
+}
+#main h1{
+    font-size: 370px;
+    font-weight:200;
+    position: absolute;
+    left:5%;
+}
+#white {
+    color: white;
+}
+
+#black {
+    color: black;
+}
+#first{
+    height: 127%;
+}
+
+#second{
+    position: absolute;
+    height: 400px;
+    top: 50%;
+}
+#third{
+    position: absolute;
+    height:300px;
+    bottom:0%;
+    left:64%;
+}
+#fourth{
+    position: absolute;
+    height:350px;
+    right:9%;
+    bottom:22%;
+}
+#productDetails{
+    position:absolute;
+    bottom:8%;
+    width: 200px;
+    left:5%;
+    color:#ffffff;
+}
+
+#productDetails p{
+    font-weight:200;
+    font-size: 14px;
+}
+
+#productDetails h4{
+    margin-top:15px;
+}
+#bottomLeftFooter a{
+    position: absolute;
+    bottom:3%;
+    text-decoration:none;
+    color:#ffffff  ;
+    left: 5%;
+    font-size: 25px;
+    font-style:italic;
+}
+#bottomRightFooter a{
+    position: absolute;
+    bottom:3%;
+    text-decoration:none;
+    color:#000000  ;
+    right: 5%;
+    font-size: 25px;
+    font-style:italic;
+}

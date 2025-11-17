@@ -1,0 +1,289 @@
+@font-face {
+    font-family: regular;
+    src: url(./sf-pro-text_regular.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: regular;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+}
+#navbar{
+    width:100%;
+    height:45px;
+    background: #ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 42px;
+    opacity:90%;
+    position:fixed;
+}
+#navbar a{
+    text-decoration: none;
+    color:black;
+    font-size: 12px;
+    
+}
+
+#iPhone17Pro{
+    width: 100%;
+    height:74%;
+    background-image: url(https://www.apple.com/v/home/ch/images/heroes/iphone-17-pro/hero_iphone_17_pro__bknyzxfk2agi_large_2x.jpg);
+    background-size: cover;
+    background-position: center;
+    color:rgb(255, 255, 255);
+    padding: 45px;
+    text-align:center;
+}
+#iPhone17Pro h1{
+    font-size:55px;
+}
+#iPhone17Pro h3{
+    font-size:25px;
+    font-weight: 5;
+}
+#iPhone17Pro button{
+    margin:20px;
+    padding:12px 25px;
+    font-size:18px;
+    border-radius:40px;
+    border:none;
+    border:1px solid #007BFF;
+}
+#iPhone17Pro #first{
+    background-color: #007BFF;
+    color: white;
+}
+#iPhone17Pro #second{
+    background-color: #000000;
+    color: #007BFF;
+}
+#iPhone17Pro #second:hover{
+    background-color: #007BFF;
+    color: #ffffff;
+}
+#iPhoneAir{
+    width: 100%;
+    height:74%;
+    background-image: url(https://www.apple.com/v/home/ch/images/heroes/iphone-air/hero_iphone_air__0gxyavihpiqu_medium_2x.jpg);
+    background-size: 100%;
+    background-position: bottom center;
+    color:rgb(0, 0, 0);
+    padding: 45px;
+    text-align:center;
+}
+#iPhoneAir h1{
+    font-size:55px;
+}
+#iPhoneAir h3{
+    font-size:25px;
+    font-weight: 5;
+}
+#iPhoneAir button{
+    margin:20px;
+    padding:12px 25px;
+    font-size:18px;
+    border-radius:40px;
+    border:1px solid #007BFF;
+}
+#iPhoneAir #first{
+    background-color: #007BFF;
+    color: white;
+}
+#iPhoneAir #second{
+    background-color: #ffffff;
+    color: #007BFF;
+}
+#iPhoneAir #second:hover{
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+
+#fsection{
+    width: 100%;
+    height:75%;
+    margin-top:-28px;
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-end;
+}
+button{
+    margin:10px;
+    padding:10px 17px;
+    font-size:13px;
+    border-radius:40px;
+    border:1px solid #007BFF;
+}
+#first1{
+    background-color: #007BFF;
+    color: white;
+}
+#second2{
+    background-color: #ffffff;
+    color: #007BFF;
+}
+#second2:hover{
+    background-color: #007BFF;
+    color: #ffffff;
+}
+#fsection h1{
+    font-size:55px;
+    font-weight:900;
+}
+#fsection h3{
+    font-size:25px;
+    font-weight: 5;
+}
+#iPhone17{
+    width: 48%;
+    height:90%;
+    background-image: url(https://www.apple.com/v/home/ch/images/promos/iphone-17/promo_iphone_17__bhofuohbsu3m_small_2x.jpg);
+    background-size:  cover;
+    background-position: center;
+    padding: 45px;
+    color:rgb(0, 0, 0);
+    
+    text-align:center;
+}
+
+
+#Airpods{
+    width: 48%;
+    height:90%;
+    background-image: url(https://www.apple.com/v/home/ch/images/promos/airpods-pro-3/promo_airpodspro_3__f6xmza7bglei_small_2x.jpg);
+    background-size: cover;
+    background-position: center;
+    color:rgb(0, 0, 0);
+    padding: 45px;
+    text-align:center;
+}
+
+#ssection{
+    width: 100%;
+    height:75%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+#ssection h1{
+    font-size:55px;
+}
+#ssection h3{
+    font-size:25px;
+    font-weight: 100;
+}
+#watch11{
+    width: 48%;
+    height:90%;
+    background-image: url(https://www.apple.com/in/home/images/promos/apple-watch-series-11/promo_apple_watch_series_11__b63hxviqvonm_small_2x.jpg);
+    background-size: cover;
+    background-position:center;
+    color:rgb(0, 0, 0);
+    padding: 45px;
+    text-align:center;
+}
+#watch11 i{
+    font-size:55px;
+    position:relative;
+    top:-5px;
+}
+#watch11 #watch, #watch11 #series11{
+    display:inline;
+} 
+#watch{
+    font-weight:900;
+}
+#series11{
+    font-weight:100;
+}
+
+#watchse{
+    width: 48%;
+    height:90%;
+    background-image: url(https://www.apple.com/in/home/images/promos/apple-watch-se-3/promo_apple_watch_se_3__fz5y29qx5mmy_medium_2x.jpg);
+    background-size: cover;
+    background-position: center;
+    color:rgb(0, 0, 0);
+    padding: 45px;
+    text-align:center;
+}
+
+#watchse i{
+    font-size:55px;
+    position:relative;
+    top:-5px;
+}
+#watchse #watch, #watchse #se3{
+    display:inline;
+} 
+#se3{
+    font-weight:100;
+}
+#tsection{
+    width: 100%;
+    height:75%;
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+}
+#tsection h1{
+    font-size:55px;
+}
+#tsection h3{
+    font-size:25px;
+    font-weight: 100;
+}
+#watchultra{
+    width: 48%;
+    height:90%;
+    background-image: url(https://www.apple.com/in/home/images/promos/apple-watch-ultra-3/promo_apple_watch_ultra3__bwvslhbxx99e_small_2x.jpg);
+    background-size: cover;
+    background-position:center;
+    color:rgb(255, 255, 255);
+    padding: 45px;
+    text-align:center;
+}
+#watchultra i{
+    font-size:55px;
+    position:relative;
+    top:-5px;
+}
+#watchultra #watchu, #watchultra #ultra{
+    display:inline;
+} 
+#watchu{
+    font-weight:900;
+}
+#ultra{
+    font-weight:100;
+}
+
+#tradein{
+    width: 48%;
+    height:90%;
+    background-image: url(https://www.apple.com/v/home/ch/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_small_2x.jpg);
+    background-size: cover;
+    background-position: center;
+    color:rgb(0, 0, 0);
+    padding: 45px;
+    text-align:center;
+}
+
+#tradein i{
+    font-size:55px;
+    position:relative;
+    top:-5px;
+}
+#tradein #t, #tradein #i{
+    display:inline;
+} 
