@@ -18,6 +18,7 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    transition: all 0.8s ease;
 }
 
 h1{
