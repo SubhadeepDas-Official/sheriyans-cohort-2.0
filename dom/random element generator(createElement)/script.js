@@ -7,6 +7,7 @@ btn.addEventListener('click', function(){
     let x = Math.random()*100
     let y = Math.random()*100
     let rt = Math.random()*100
+    let s = Math.random()*3
     let r = Math.random()*256
     let g = Math.random()*256
     let b = Math.random()*256
@@ -17,6 +18,7 @@ btn.addEventListener('click', function(){
     div.style.top = x+'%'
     div.style.left = y+'%'
     div.style.rotate = rt+'deg'
+    div.style.scale = s
     div.style.backgroundColor = `rgb(${r},${g},${b})`
 
     main.appendChild(div)
