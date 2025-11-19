@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    transition: all 0.8s ease;
+}
+
+button{
+    background-color: rgb(53, 2, 240);
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(255,255, 255);
+    border:2px solid rgb(243, 241, 241);
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+button:active{
+    scale: 0.9;
+}
