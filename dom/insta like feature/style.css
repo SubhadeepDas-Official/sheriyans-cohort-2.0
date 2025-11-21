@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card{
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+}
+#card div{
+    overflow: hidden;
+    position: relative;
+}
+#card img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+#card i{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%) scale(0) rotate(-60deg);
+    font-size: 150px;
+    opacity: 0;
+    transition: all cubic-bezier(.59,.42,.48,1.52) 0.4s;
+    background: linear-gradient(to top left, #7807c3,#8121c2, #fd1d1d,#fcb045);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
