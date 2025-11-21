@@ -11,6 +11,7 @@ btn.addEventListener('click', function(){
     let r = Math.random()*256
     let g = Math.random()*256
     let b = Math.random()*256
+    let sc = Math.random()*3
 
     let h1 = document.createElement('h1')
     h1.style.color = 'white'
@@ -20,7 +21,9 @@ btn.addEventListener('click', function(){
 
     h1.style.top = x+'%'
     h1.style.left = y+'%'
+    h1.style.scale = sc
     h1.style.rotate = rt+'deg'
+
 
     main.appendChild(h1)
     
