@@ -5,7 +5,7 @@ let info = document.querySelector('h3')
 
 let count = 0;
 btn.addEventListener('click', function(){
-    let num = 60+Math.floor(Math.random()*40)
+    let num = 50+Math.floor(Math.random()*50)
     btn.style.pointerEvents = 'none'
     info.innerHTML = `Your download will take ${num/10} seconds`
     
