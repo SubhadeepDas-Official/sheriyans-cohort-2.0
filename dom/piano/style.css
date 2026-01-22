@@ -17,7 +17,7 @@ body {
 
 .piano {
     position: relative;
-    border-top: solid 2px rgb(0, 0, 0);
+    border-top: solid 30px rgb(37, 37, 37);
     width: 50%;
     height: 70%;
     overflow: hidden;

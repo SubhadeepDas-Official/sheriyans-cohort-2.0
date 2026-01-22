@@ -32,20 +32,17 @@ pianoKeys.forEach((key) => {
 });
 
 document.addEventListener('keydown', (e) => {
-    if (e.repeat) return;
-
     const pressedKey = pianoKeys.find(k => k.code === e.code);
-    if (!pressedKey) return;
-
-    pressedKey.aud.currentTime = 0;
     pressedKey.aud.play();
+    
+    if (e.repeat) return;
+    pressedKey.aud.currentTime = 0;
+
 
     pressedKey.elem.classList.add('active');
 });
 
 document.addEventListener('keyup', (e) => {
     const releasedKey = pianoKeys.find(k => k.code === e.code);
-    if (!releasedKey) return;
-
     releasedKey.elem.classList.remove('active');
 });
