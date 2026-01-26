@@ -1,9 +1,37 @@
-// apply Method Practice
-// 	23.	Create a function introduce that accepts two arguments: city and role, and prints name, city, and role using this.name.
-// 	24.	Create an object with a name property.
-// 	25.	Use apply to call introduce using the object and an array of arguments.
-// 	26.	Explain in simple words how apply differs from call.
+// Ek function banao `getUser`
 
-function Location(){
-    this
+// **Requirements:**
+// - `getUser` `username` lega
+// - 1 second ke baad `callback` ko ek object de:
+//   - `id`
+//   - `username`
+
+// **Then:**
+// - Callback ke andar ek aur function call karo `getUserPosts`
+
+// **`getUserPosts` requirements:**
+// - `userId` lega
+// - 1 second ke baad `callback` ko `posts` ka array de
+
+// **Final output:**
+// - User ka `username` print ho
+// - Fir uske `posts` print ho
+
+function getUser(username, cb){
+    console.log("Fetching userdata...")
+    setTimeout(() => {
+        cb({username:username});
+    }, 1000);
 }
+function getUserPosts(id ,cb){
+    console.log("Fetching all posts...")
+    setTimeout(() => {
+        cb(["a","b","c"]);
+    }, 2000);
+}
+
+getUser("Harsh", function(user){
+    getUserPosts(1, function(allPosts){
+        console.log(user.username, allPosts)
+    })
+})
