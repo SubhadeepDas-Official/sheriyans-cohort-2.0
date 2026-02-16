@@ -29,4 +29,10 @@ form.addEventListener("submit", function(dets){
     name.textContent = inputs[1].value
     age.textContent = inputs[2].value
     email.textContent = inputs[3].value
+
+    inputs.forEach(function(inp){
+        if(inp.type !== "submit"){
+            inp.value = "";
+        }
+    })
 })
