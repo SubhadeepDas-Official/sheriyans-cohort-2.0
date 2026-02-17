@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica';
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-Light.otf);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+li{
+    font-size: 50px;
+}
+.done{
+    text-decoration: line-through;
+}
