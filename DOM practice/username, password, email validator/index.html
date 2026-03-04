@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username">
+                <small class="error" id="userError">Username is incorrect</small>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter email">
+                <small class="error" id="emailError">Email is incorrect</small>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <small class="error" id="passError">Password is incorrect</small>
+            </div>
+
+            <button type="submit">Login</button>
+            <div id="message"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
