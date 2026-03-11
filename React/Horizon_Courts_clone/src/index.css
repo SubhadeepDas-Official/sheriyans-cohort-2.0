@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    font-family: 'helvetica';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+.nav-btn{
+  border: solid 1px rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 5px;
+  font-weight: 100;
+}
+.nav-btn:hover{
+  border: solid 1px grey;
+  color: rgb(6, 5, 5);
+}
+.img-trainer{
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+a{
+  color: white;
+}
