@@ -23,7 +23,8 @@ const Hero = () => {
           <br />
           and every swings brings you closer to victory.
         </h2>
-        <button className="border rounded-[50px] bg-transparent border-black p-2.5 text-black hover:bg-[#05E5F2] hover:text-white hover:border-[#05E5F2] font-light">
+        <button className="rounded-[50px]  bg-linear-to-r from-cyan-50/40 to-cyan-400/70 backdrop-blur-xs border border-cyan-300 shadow-lg bg-transparent p-2.5 text-green-800 
+        hover:bg-linear-to-t from-blue/65 to blue/10  font-light">
           Start your own journey
         </button>
       </div>

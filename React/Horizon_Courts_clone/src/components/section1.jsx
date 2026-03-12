@@ -55,14 +55,12 @@ const Section1 = () => {
               game from first serve to tournament level.
             </h3>
           </div>
-
           <div className="flex justify-between">
             <div className="font-light">
               <h1>Beginner</h1>
               <h1>Intermediate</h1>
               <h1>Advanced</h1>
             </div>
-
             <div>
               <div>
                 <i class="ri-circle-fill i-dots"></i>
@@ -96,7 +94,6 @@ const Section1 = () => {
                 <i class="ri-circle-fill i-dots"></i>
               </div>
             </div>
-
             <div className="font-light">
               <h1>50</h1>
               <h1>40</h1>
@@ -106,7 +103,7 @@ const Section1 = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-10 ">
+      <div className="bottom flex flex-col gap-10 ">
         <h1 className="flex justify-center text-3xl font-light">
           A few more facts about us in numbers
         </h1>
@@ -137,6 +134,7 @@ const Section1 = () => {
           </h1>
         </div>
       </div>
+
     </div>
   );
 };
