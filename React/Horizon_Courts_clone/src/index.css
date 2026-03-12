@@ -29,3 +29,14 @@ body {
 a{
   color: white;
 }
+.i-dots{
+  color: #2DB3FE;
+}
+.num-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 36px;
+  font-weight: 700;
+}
