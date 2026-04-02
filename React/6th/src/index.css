@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    color: whitesmoke;
+}
+form{
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+}
+
+input, button{
+  padding: 10px 20px;
+}
