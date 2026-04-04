@@ -15,8 +15,7 @@ const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    const oldUserData = [...userData,{name,email,date,image}]
-    setUserData(oldUserData)
+    setUserData([...userData,{name,email,date,image}])
 
 
     setName('')
@@ -26,30 +25,36 @@ const App = () => {
     fileRef.current.value = null;
   }
 
+  const handleDeletion = (idx) => {
+    const copyUserData = [...userData]
+    copyUserData.splice(idx,1)
+    setUserData(copyUserData)
+  }
+
   return (
     <div>
-      <form className='p-10 flex gap-5' 
+      <form 
         onSubmit={(e) => {
           handleSubmit(e)
       }}>
-        <div>
+        <div className='flex gap-2 justify-between p-5'>
           <input onChange={(e)=>{
             setName(e.target.value)
             }} 
-            type="text" placeholder='Enter your name' className='border p-2' value={name} required/>
+            type="text" placeholder='Enter your name' className='border-2 text-xl rounded font-semibold p-2' value={name} required/>
           <input onChange={(e)=>{
             setEmail(e.target.value)
             }}
-            type="email" placeholder='Enter your email' className='border p-2 ' value={email} required />
+            type="email" placeholder='Enter your email' className='border-2 p-2 text-xl rounded font-semibold' value={email} required />
           <input onChange={(e)=>{
             setDate(e.target.value)
             }}
-            type="date" placeholder='Enter your email' className='border p-2' value={date} required/>
+            type="date" placeholder='Enter your email' className='border-2 p-2 text-xl rounded font-semibold' value={date} required/>
 
           <input 
             type="file" 
             accept="image/*"
-            className='border p-2'
+            className='border-2 p-2 text-xl rounded font-semibold'
             ref={fileRef}
             onChange={(e) => {
               const file = e.target.files[0];
@@ -58,11 +63,11 @@ const App = () => {
             }}
           />
 
-          <input type="submit" className='border p-2 bg-indigo-200' />
+          <input type="submit" className='text-white border-2 p-2 text-xl bg-linear-to-br from-indigo-800 via-purple-600 to-pink-300 rounded font-semibold' />
         </div>
       </form>
 
-      <Cards allUserData = {userData}/>
+      <Cards allUserData = {userData} handleDeletion = {handleDeletion}/>
       
     </div>
   )
