@@ -6,29 +6,18 @@ const App = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [date, setDate] = useState('')
-  const [image, setImage] = useState('');
-  
-  const [allUsers, setAllUsers] = useState([])
-  const [allEmails, setAllEmails] = useState([])
-  const [allDates, setAllDates] = useState([])
-  const [allImages, setAllImages] = useState([]);
+  const [image, setImage] = useState('')
+
+  const [userData, setUserData] = useState([])
 
   const fileRef = useRef();
   
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    const oldUsers = [...allUsers,name]
-    setAllUsers(oldUsers)
+    const oldUserData = [...userData,{name,email,date,image}]
+    setUserData(oldUserData)
 
-    const oldEmails = [...allEmails,email]
-    setAllEmails(oldEmails)
-
-    const oldDates = [...allDates,date]
-    setAllDates(oldDates)
-
-    const oldImages = [...allImages, image];
-    setAllImages(oldImages);
 
     setName('')
     setEmail('')
@@ -73,17 +62,7 @@ const App = () => {
         </div>
       </form>
 
-      <Cards alluser = {allUsers} allemail = {allEmails} alldate = {allDates} allimages = {allImages}/>
-      
-      {/* {allUsers.map(function(e){
-        return <h1 className='text-cyan-950 text-5xl'>{e}</h1>
-      })}
-      {allEmails.map(function(e){
-        return <h1 className='text-cyan-950 text-5xl'>{e}</h1>
-      })}
-      {allDates.map(function(e){
-        return <h1 className='text-cyan-950 text-5xl'>{e}</h1>
-      })} */}
+      <Cards allUserData = {userData}/>
       
     </div>
   )
