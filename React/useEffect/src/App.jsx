@@ -1,30 +1,29 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import axios from 'axios';
 
 const App = () => {
 
-  const [count, setCount] = useState(0)
-  const [num, setNum] = useState(0)
+  const [btn, setBtn] = useState('')
 
-  useEffect(()=>{
-    console.log('useEffect is running...');
-    
-},[num])
+  const [username, setUsername] = useState('')
+
+  const getData = async () => {
+    const raw =await axios.get('https://randomuser.me/api/')
+    setUsername(raw.data.results[0].name.first+" "+raw.data.results[0].name.last)
+  }
+
+  useEffect(function(){
+    getData()
+  },[btn])
 
   return (
     <div>
-      <h1>{count}</h1>
+      <h1>{username}</h1>
       <button onClick={()=> {
-        setCount(count+1)
-      }}>Increase</button>
-      <button onClick={()=>{
-        setCount(count-1)
-      }}>Decrease</button>
-      <h1>{num}</h1>
-      <button onClick={()=> {
-        setNum(num+1)
-      }}>Increase</button>
+        setBtn(prev => prev + 1)
+      }}>Change User</button>
     </div>
   )
 }
