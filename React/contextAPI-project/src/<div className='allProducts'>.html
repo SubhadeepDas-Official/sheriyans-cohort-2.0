@@ -1,0 +1,10 @@
+<div className="allProducts">
+  {productData.map(function(elem,idx){ return
+  <a target="_blank" className="product" key="{idx}">
+    <div>
+      <img src="{elem.image}" alt="" />
+      <h2>{elem.title}</h2>
+    </div>
+  </a>
+  })}
+</div>
