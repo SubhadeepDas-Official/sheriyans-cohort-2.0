@@ -4,6 +4,8 @@ import axios from 'axios';
 
 const App = () => {
   const [notes, setNotes] = useState([]);
+  const [editingId, setEditingId] = useState(null);
+  const [editedDescription, setEditedDescription] = useState('');
 
   const fetchNotes = () => {
     axios.get('http://localhost:3000/api/notes').then((res) => {
@@ -15,12 +17,12 @@ const App = () => {
     fetchNotes();
   }, []);
 
+
   async function handleSubmit(e) {
     e.preventDefault();
-    const { title, description } = e.target.elements;
-    // console.log(title.value,description.value)
     // console.log(e.target.elements.title.value);
     // console.log(e.target.elements.description.value);
+    const { title, description } = e.target.elements;
     await axios.post('http://localhost:3000/api/notes', {
       title: title.value,
       description: description.value,
@@ -29,13 +31,12 @@ const App = () => {
     e.target.reset();
   }
 
+
   async function handleDeletion(id) {
     await axios.delete('http://localhost:3000/api/notes/' + id);
     fetchNotes();
   }
 
-  const [editingId, setEditingId] = useState(null);
-  const [editedDescription, setEditedDescription] = useState('');
 
   async function handleUpdation(id) {
     await axios.patch('http://localhost:3000/api/notes/' + id, {
@@ -45,6 +46,7 @@ const App = () => {
     setEditedDescription('');
     fetchNotes();
   }
+
 
   function handleCancel() {
     setEditingId(null);
