@@ -1,0 +1,18 @@
+const mongoose = require('mongoose');
+
+const followSchema = new mongoose.Schema(
+  {
+    follower: { type: String },
+    followee: { type: String },
+  },
+  {
+    timestamps: true,
+  },
+);
+
+// it ensures that USER-A can follow USER-B only once
+followSchema.index({ follower: 1, followee: 1 }, { unique: true });
+
+const followModel = mongoose.model('follows', followSchema);
+
+module.exports = followModel;

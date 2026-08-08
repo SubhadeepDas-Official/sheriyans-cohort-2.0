@@ -38,6 +38,7 @@ const registerController = async (req, res) => {
     {
       id: user._id,
       email: user.email,
+      username: user.username,
     },
     process.env.JWT_SECRET_KEY,
     { expiresIn: '1d' },
@@ -79,6 +80,7 @@ const loginController = async (req, res) => {
     {
       id: user._id,
       email: user.email,
+      username: user.username,
     },
     process.env.JWT_SECRET_KEY,
     { expiresIn: '1d' },
