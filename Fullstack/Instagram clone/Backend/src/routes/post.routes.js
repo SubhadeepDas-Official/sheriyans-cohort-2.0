@@ -21,4 +21,7 @@ postRouter.get('/get-post', identifyUser, postController.getPostController)
 //returns details about a specific post through postId. Also checks whether the post actually exists, whether the post belongs to the user the request came from 
 postRouter.get('/details/:postId', identifyUser, postController.getPostDetailsController)
 
+//like a post with the id provided in the request params
+postRouter.post('/like/:postId', identifyUser, postController.likePostController)
+
 module.exports = postRouter;

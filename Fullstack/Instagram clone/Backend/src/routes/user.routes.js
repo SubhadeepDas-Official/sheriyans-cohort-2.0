@@ -6,6 +6,14 @@ const userRouter = express.Router();
 
 userRouter.post('/follow/:username', identifyUser, userController.followUserController)
 
+userRouter.get('/follow/requests', identifyUser, userController.viewAllPendingFollowRequest)
+
+userRouter.patch('/follow/:username/accept', identifyUser, userController.acceptFollowRequestController)
+
+userRouter.patch('/follow/:username/reject', identifyUser, userController.rejectFollowRequestController)
+
+userRouter.delete('/follow/:username/cancel', identifyUser, userController.cancelFollowRequest)
+
 userRouter.post('/unfollow/:username', identifyUser, userController.unfollowUserController)
 
 module.exports = userRouter;

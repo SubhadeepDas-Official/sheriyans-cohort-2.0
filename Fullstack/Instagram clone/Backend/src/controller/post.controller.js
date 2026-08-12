@@ -2,13 +2,13 @@ const ImageKit = require('@imagekit/nodejs');
 const { toFile } = require('@imagekit/nodejs');
 const jwt = require('jsonwebtoken');
 const postModel = require('../models/posts.model');
+const likeModel = require('../models/like.model');
 
 const imageKit = new ImageKit({
   privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
 });
 
 const createPostController = async (req, res) => {
-  
   const uploadedFile = await imageKit.files.upload({
     file: await toFile(req.file.buffer, req.file.originalname),
     fileName: `profile_${Date.now()}`,
@@ -67,8 +67,43 @@ const getPostDetailsController = async (req, res) => {
   });
 };
 
+const likePostController = async (req, res) => {
+  const username = req.user.username;
+  const postId = req.params.postId;
+
+  const post = await postModel.findById(postId);
+
+  if (!post) {
+    return res.status(404).json({
+      message: 'Post not found!',
+    });
+  }
+
+  const exitingLike = await likeModel.findOneAndDelete({
+    post: postId,
+    user: username,
+  });
+
+  if (exitingLike) {
+    return res.status(200).json({
+      message: 'You have unliked this post!',
+    });
+  }
+
+  const like = await likeModel.create({
+    post: postId,
+    user: username,
+  });
+
+  res.status(200).json({
+    message: 'Post liked successfully!',
+    like,
+  });
+};
+
 module.exports = {
   createPostController,
   getPostController,
   getPostDetailsController,
+  likePostController,
 };
