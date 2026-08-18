@@ -9,16 +9,67 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [bio, setBio] = useState('');
 
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post(
+        'http://localhost:3000/api/auth/register',
+        {
+          username,
+          email,
+          password,
+          bio,
+        },
+        {
+          withCredentials: true,
+        },
+      );
+      alert(res.data.message);
+    } catch (error) {
+      alert(error.response?.data?.message || error.message);
+    }
+    e.target.reset();
+  };
+
   return (
     <main>
       <div className="form-container">
         <h1>Register User</h1>
-        <form>
-          <input type="text" name="username" placeholder="Enter Username" />
-          <input type="text" name="email" placeholder="Enter email" />
-          <input type="text" name="password" placeholder="Enter password" />
-          <input type="text" name="bio" placeholder="Enter user bio" />
-          <button type="submit">Submit</button>
+        <form onSubmit={handleFormSubmit}>
+          <input
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+            type="text"
+            name="username"
+            placeholder="Enter Username"
+          />
+          <input
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            type="text"
+            name="email"
+            placeholder="Enter email"
+          />
+          <input
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+            type="text"
+            name="password"
+            placeholder="Enter password"
+          />
+          <input
+            onChange={(e) => {
+              setBio(e.target.value);
+            }}
+            type="text"
+            name="bio"
+            placeholder="Enter user bio"
+          />
+          <button type="submit">Register</button>
         </form>
         <div className="toggleAuthForm">
           <h2>Or</h2>
