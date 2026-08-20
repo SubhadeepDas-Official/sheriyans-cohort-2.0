@@ -16,19 +16,19 @@ const Login = () => {
     return <h1>Loading...</h1>;
   }
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const response= await handleLogin(username, password);
-    alert(response.message)
-    navigate('/');
-  } catch (error) {
-    alert(error);
-  }
+    try {
+      const response = await handleLogin(username, password);
+      alert(response);
+      navigate('/register');
+    } catch (error) {
+      alert(error.response?.data?.message || error.message);
+    }
 
-  e.target.reset();
-};
+    e.target.reset();
+  };
 
   return (
     <main>

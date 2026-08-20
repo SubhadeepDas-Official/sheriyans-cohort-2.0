@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
-import '../style/form.scss'
+import '../style/form.scss';
 import { useAuth } from '../hooks/useAuth';
 
 const Register = () => {
@@ -12,7 +12,7 @@ const Register = () => {
   const [bio, setBio] = useState('');
 
   const { handleRegister, loading } = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -21,11 +21,11 @@ const Register = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await handleRegister(username, email, password, bio)
-      alert(response.message)
-      navigate('/login')
+      const response = await handleRegister(username, email, password, bio);
+      alert(response);
+      navigate('/login');
     } catch (error) {
-      alert(error.response.data.message)
+      alert(error.response?.data?.message || error.message);
     }
     e.target.reset();
   };

@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const response = await register(username, email, password, bio);
       setUser(response.user);
-      return response;
+      return response.message;
     } finally {
       setLoading(false);
     }
@@ -25,9 +25,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const response = await login(username, password);
       setUser(response.user);      
-      return response;
-    } catch (error) {
-      throw error.response?.data?.message || error.message;
+      return response.message;
     } finally {
       setLoading(false);
     }
