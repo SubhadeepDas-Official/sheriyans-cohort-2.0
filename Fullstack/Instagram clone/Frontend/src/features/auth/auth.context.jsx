@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react';
+
 import { login, register } from './services/auth.api';
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -14,8 +15,6 @@ export const AuthProvider = ({ children }) => {
       const response = await register(username, email, password, bio);
       setUser(response.user);
       return response;
-    } catch (error) {
-      throw error.response?.data?.message || error.message;
     } finally {
       setLoading(false);
     }
