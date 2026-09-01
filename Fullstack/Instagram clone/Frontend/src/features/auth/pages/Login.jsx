@@ -32,10 +32,10 @@ const Login = () => {
 
   return (
     <main>
-      <div onSubmit={handleSubmit} className="form-container">
+      <div className="form-container">
         <h1>Login</h1>
         <div className="form">
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               onChange={(e) => {
                 setUsername(e.target.value);

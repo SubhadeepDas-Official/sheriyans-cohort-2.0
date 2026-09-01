@@ -24,10 +24,6 @@ export const login = async (username, password) => {
 };
 
 export const getMe = async () => {
-  try {
     const response = await axios.get('/get-me');
     return response.data;
-  } catch (error) {
-    throw error.response?.data?.message || error.message;
-  }
 };
