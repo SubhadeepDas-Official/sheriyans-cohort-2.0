@@ -22,7 +22,7 @@ const Login = () => {
     try {
       const response = await handleLogin(username, password);
       alert(response);
-      navigate('/register');
+      navigate('/feed');
     } catch (error) {
       alert(error.response?.data?.message || error.message);
     }
@@ -31,7 +31,7 @@ const Login = () => {
   };
 
   return (
-    <main>
+    <main className='auth-page'>
       <div className="form-container">
         <h1>Login</h1>
         <div className="form">

@@ -5,7 +5,7 @@ import { login, register } from './services/auth.api';
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
+export const AuthContextProvider = ({ children }) => {
 
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);

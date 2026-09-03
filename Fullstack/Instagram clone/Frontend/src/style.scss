@@ -9,9 +9,11 @@ html,
 body,
 #root {
   width: 100%;
+  min-height: 100%;
 }
 
 body {
+  min-height: 100vh;
   background-color: #2e2d2d;
   color: rgb(206, 208, 208);
 }

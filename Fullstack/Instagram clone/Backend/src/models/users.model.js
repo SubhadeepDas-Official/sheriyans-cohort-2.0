@@ -14,6 +14,7 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: [true, 'Password is required!'],
+    select: false, //excludes this field when fetching data from the database by default.
   },
   bio: String,
   profileImage: {

@@ -60,7 +60,7 @@ const loginController = async (req, res) => {
 
   const user = await userModel.findOne({
     $or: [{ username }, { email }],
-  });
+  }).select('+password'); //Include the password field in the result forcibly, even though the schema normally hides it
 
   if (!user) {
     return res.status(404).json({
