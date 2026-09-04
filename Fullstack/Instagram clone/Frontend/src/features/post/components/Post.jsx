@@ -2,24 +2,17 @@ const Post = ({ user, post }) => {
   return (
     <div className="post">
       <div className="post-top">
-        <img
-          src={user.profileImage}
-          alt=""
-        />
+        <img src={user.profileImage} alt="" />
 
         <p>{user.username}</p>
       </div>
 
-      <img
-        className="post-img"
-        src={post.img}
-        alt=""
-      />
+      <img className="post-img" src={post.img} alt="" />
 
       <div className="post-bottom">
         <div className="icons">
           <div className="left">
-            <i className="ri-poker-hearts-line"></i>
+            <i className={post.isLiked ? 'ri-poker-hearts-fill like' : 'ri-poker-hearts-line'}></i>
             <i className="ri-chat-3-line"></i>
             <i className="ri-share-2-line"></i>
           </div>

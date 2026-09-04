@@ -8,7 +8,7 @@ const Feed = () => {
 
   useEffect(() => {
     handleFeed();
-  });
+  },[]);
 
   if (loading || !feed) {
     return (
